@@ -43,7 +43,7 @@ Feature: Authentication
     When I send Get User Information Endpoint Request2
     Then I receive User Information valid HTTP response code 404
 
-  Scenario: Post - As admin I Can see Response User Information Endpoint 
+  Scenario: Post - As admin I Can see Response User Information Endpoint
     Given I set POST User Information Wrong Endpoint
     When I send POST User Information HTTP request2
     Then I receive POST User Information valid HTTP response code 405
