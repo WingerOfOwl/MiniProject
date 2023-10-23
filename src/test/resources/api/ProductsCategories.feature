@@ -1,4 +1,4 @@
-Feature: Hello
+Feature: Product Catefory
   As an Admin
   I want to see index API
   So that I can See the Result
@@ -13,7 +13,7 @@ Feature: Hello
     When I send Post A Category request2
     Then I receive valid Post A Category HTTP response code 404
 
-  Scenario: Put - As admin I have be able to to Post A Category
+  Scenario: Put - As admin I have be able to to Put A Category
     Given I set Put A Category Endpoint
     When I send Put A Category Endpoint Request
     Then I receive valid HTTP Put A Category response code 405

@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 
@@ -23,16 +24,28 @@ public class CreateNewOrder {
 
     @Step("I send POST New Order HTTP request")
     public void sendPostNewOrderHttpRequest() {
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("product", 1);
-        requestBody.put("quantity", 1);
+        JSONArray orderItems = new JSONArray();
+        JSONObject orderItem = new JSONObject();
+        orderItem.put("product_id", 11649);
+        orderItem.put("quantity", 1);
+        orderItems.add(orderItem);
 
-        SerenityRest.given().header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkZpcnN0bmFtZSBMYXN0bmFtZSIsIkVtYWlsIjoic29tZW9uZUBtYWlsLmNvbSJ9.bGpZNDg6YHtKlTFw7_yuyn3SAICmfvdIV1yX7mIKrTw").body(requestBody.toJSONString()).post(setNewOrderEndpoint());
+        JSONArray requestBody = new JSONArray();
+        JSONObject orderCreate = new JSONObject();
+        orderCreate.put("order_items", orderItems);
+        requestBody.add(orderCreate);
+
+        SerenityRest
+                .given()
+                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkZpcnN0bmFtZSBMYXN0bmFtZSIsIkVtYWlsIjoic29tZW9uZUBtYWlsLmNvbSJ9.bGpZNDg6YHtKlTFw7_yuyn3SAICmfvdIV1yX7mIKrTw")
+                .contentType("application/json")
+                .body(requestBody.toString())
+                .post(setNewOrderEndpoint());
     }
 
     @Step("I receive POST New Order valid HTTP response code 200")
     public void receivePostNewOrderHttpResponseCode200() {
-        restAssuredThat(response -> response.statusCode(400));
+        restAssuredThat(response -> response.statusCode(200));
     }
 
 

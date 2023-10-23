@@ -45,7 +45,7 @@ public class DeleteACategory {
     public void sendPutOrderByIDHttpRequest1(){
         JSONObject requestBody = new JSONObject();
 
-        SerenityRest.given().header("Content-Type", "application/json").body(requestBody.toJSONString()).put(setPutACategoryEndpoint1());
+        SerenityRest.given().header("Content-Type", "application/json").body(requestBody.toJSONString()).post(setPutACategoryEndpoint1());
     }
     @Step("I receive valid HTTP Put A Category 2 response code 405")
     public void receivePUTOrderByIDHttpResponseCode405(){
