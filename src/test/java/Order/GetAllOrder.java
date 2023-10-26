@@ -63,6 +63,7 @@ public class GetAllOrder {
 
     @Step("I receive Get All Order valid HTTP response code 405")
     public void receivePostAllOrderHttpResponseCode405(){
-        restAssuredThat(response -> response.statusCode(400));
+        restAssuredThat(response -> response.statusCode(400
+        ));
     }
 }

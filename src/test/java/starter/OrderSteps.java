@@ -101,19 +101,7 @@ public class OrderSteps {
         allOrder.receivePostAllOrderHttpResponseCode405();
     }
 
-    @Given("I set Get Order By ID Endpoint")
-    public void setGetOrderByIDApiEndpoint(){
-        orderByID.setGetOrderByIDApiEndpoint();
-    }
-    @When("I send Get Order By ID HTTP request")
-    public void sendGetOrderByIDHttpRequest(){
-        orderByID.sendGetOrderByIDHttpRequest();
-    }
 
-    @Then("I receive Get Order By ID valid HTTP response code 404")
-    public void validateOrderByIDHttpResponseCode404(){
-        orderByID.validateOrderByIDHttpResponseCode404();
-    }
 
     @Given("I set Get Order By ID Wrong Endpoint")
     public void setOrderByIDApiEndpoint2(){

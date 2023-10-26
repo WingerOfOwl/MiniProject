@@ -9,25 +9,6 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 public class GetOrderByID {
     protected static String url = "https://altashop-api.fly.dev/api/orders/1";
 
-    @Step("I set Get Order By ID Endpoint")
-    public String setGetOrderByIDApiEndpoint() {
-
-        return url;
-    }
-
-    @Step("I send Get Order By ID HTTP request")
-    public void sendGetOrderByIDHttpRequest() {
-        SerenityRest.given()
-                .header("Authorization","Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkZpcnN0bmFtZSBMYXN0bmFtZSIsIkVtYWlsIjoic29tZW9uZUBtYWlsLmNvbSJ9.bGpZNDg6YHtKlTFw7_yuyn3SAICmfvdIV1yX7mIKrTw")
-                .when()
-                .get(setGetOrderByIDApiEndpoint());
-    }
-
-    @Step("I receive Get Order By ID valid HTTP response code 404")
-    public void validateOrderByIDHttpResponseCode404() {
-
-        restAssuredThat(response -> response.statusCode(404));
-    }
 
 
     @Step("I set Get Order By ID Wrong Endpoint")

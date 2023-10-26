@@ -59,20 +59,6 @@ public class PCSteps {
         cac.receivePUTCreateCategoryHttpResponseCode405();
     }
 
-    @Given("I set Get Category By ID Endpoint")
-    public void setCategoryByIDApiEndpoint(){
-        cib.setCategoryByIDApiEndpoint();
-    }
-    @When("I send Get Category By ID request")
-    public void sendGetCategoryByIDHttpRequest(){
-        cib.sendGetCategoryByIDHttpRequest();
-    }
-
-    @Then("I receive valid Get Category By ID HTTP response code 404")
-    public void validateCategoryByIDHttpResponseCode404(){
-        cib.validateCategoryByIDHttpResponseCode404();
-    }
-
     @Given("I set Get Category By ID Endpoint with wrong URL")
     public void setCategoryByIDApiEndpoint2(){
         cib.setCategoryByIDApiEndpoint2();

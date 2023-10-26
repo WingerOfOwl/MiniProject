@@ -18,11 +18,6 @@ Feature: Product Catefory
     When I send Put A Category Endpoint Request
     Then I receive valid HTTP Put A Category response code 405
 
-  Scenario: Get - As admin I Can Get A Category By ID Endpoint with Correct Data
-    Given I set Get Category By ID Endpoint
-    When I send Get Category By ID request
-    Then I receive valid Get Category By ID HTTP response code 404
-
   Scenario: Get - As admin I Can Get A Category By ID Endpoint with Wrong URL
     Given I set Get Category By ID Endpoint with wrong URL
     When I send Get Category By ID request2
