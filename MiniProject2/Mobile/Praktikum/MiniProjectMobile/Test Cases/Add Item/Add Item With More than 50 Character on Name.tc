@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Add Item With More than 50 Character on Name</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b00f85dc-1e27-4c07-875c-53968f2febf0</testCaseGuid>
+</TestCaseEntity>

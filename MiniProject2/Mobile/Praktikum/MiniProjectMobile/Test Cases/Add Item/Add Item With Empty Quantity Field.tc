@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Add Item With Empty Quantity Field</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>59cecb2b-a0c8-4c44-9a7c-3199322a2cd4</testCaseGuid>
+</TestCaseEntity>
